@@ -1,0 +1,13 @@
+name: AWSCodeBuild Demo
+
+on:
+  workflow_call:
+
+jobs:
+  GH-To-AWS-CodeBuild-Integratio-Test:
+    runs-on:
+      - codebuild-sm-aws-gh-demo-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - run: 
+          echo "Hello World!"
+          echo "First Build from GitHub action workflow By - Satish M."
