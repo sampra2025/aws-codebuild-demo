@@ -11,3 +11,5 @@ jobs:
       - run: 
           echo "Hello World!"
           echo "First Build from GitHub action workflow By - Satish M."
+          sh "pwd; ls -la"
+          sh "uname -a"
