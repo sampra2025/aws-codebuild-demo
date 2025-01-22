@@ -8,7 +8,7 @@ jobs:
     runs-on:
       - codebuild-sm-aws-gh-demo-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
-      - run: 
+      - run: | 
           echo "Hello World!"
           echo "First Build from GitHub action workflow By - Satish M."
           pwd; ls -la
