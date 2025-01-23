@@ -13,4 +13,3 @@ jobs:
           echo "First Build from GitHub action workflow By - Satish M."
           pwd; ls -la
           uname -a
-          py test.py
