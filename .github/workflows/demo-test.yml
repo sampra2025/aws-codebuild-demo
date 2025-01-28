@@ -12,4 +12,4 @@ jobs:
           echo "Hello World!"
           echo "First Build from GitHub action workflow By - Satish M."
           pwd; ls -la
-          uname -a
+          cat /etc/os-release
