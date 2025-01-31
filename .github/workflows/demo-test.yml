@@ -13,3 +13,7 @@ jobs:
           echo "First Build from GitHub action workflow By - Satish M."
           pwd; ls -la
           cat /etc/os-release
+          cd /ghdemo
+          pwd; ls -la
+          touch "efsTest.txt"; echo "EFS Test" > efsTest.txt 
+          ls -la
