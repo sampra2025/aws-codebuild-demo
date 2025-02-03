@@ -6,7 +6,7 @@ on:
 jobs:
   GH-To-AWS-CodeBuild-Integratio-Test:
     runs-on:
-      - codebuild-sm-aws-gh-demo-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-smTestWithVPC-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - run: | 
           echo "Hello World!"
