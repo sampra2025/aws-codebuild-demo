@@ -9,9 +9,9 @@ jobs:
       - codebuild-smTestWithVPC-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - name: Checkout Code
-        uses: |
-          actions/checkout@v3
-          aws-actions/aws-codebuild-run-build@v1
+        uses: actions/checkout@v3
+      
+      - uses: aws-actions/aws-codebuild-run-build@v1
         
       - name: Build Code
         run: |
