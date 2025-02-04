@@ -9,12 +9,12 @@ jobs:
       - codebuild-smTestWithVPC-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - name: Checkout Code
-        uses:
+        uses: |
           actions/checkout@v3
           aws-actions/aws-codebuild-run-build@v1
         
       - name: Build Code
-        run:
+        run: |
           pwd; ls -la          
           cd ${{ env.CODEBUILD_SRC_DIR }}
           python3 test.py >> /efs/efsTest.txt
