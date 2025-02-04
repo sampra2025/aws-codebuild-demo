@@ -9,11 +9,11 @@ jobs:
       - codebuild-smTestWithVPC-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - run: |
-          cd /efs; 
+          cd /efs; cat "efsTest.txt"
           echo "Hello World!"
           echo "First Build from GitHub action workflow By - Satish M."
           pwd; ls -la
           cat /etc/os-release
           dd if=/dev/zero of=output.dat  bs=1MB  count=14
-          touch "efsTest.txt"; echo "A Sample file to write on EFS" > efsTest.txt
+          touch "efsTest.txt"; echo "A Sample file to write on EFS" >> efsTest.txt
           pwd; ls -la; cat "efsTest.txt"
