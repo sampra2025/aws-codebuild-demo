@@ -8,12 +8,11 @@ jobs:
     runs-on:
       - codebuild-smTestWithVPC-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
-      - run: |
-          cd /efs; cat "efsTest.txt"
-          echo "Hello World!"
-          echo "First Build from GitHub action workflow By - Satish M."
+      - name: Checkout Code
+        uses: actions/checkout@4
+      - name: Build Code
+        run: |
+          cd $ {{env.CODEBUILD_SRC_DIR}}
           pwd; ls -la
-          cat /etc/os-release
-          dd if=/dev/zero of=output.dat  bs=1MB  count=14
-          touch "efsTest.txt"; echo "A Sample file to write on EFS" >> efsTest.txt
-          pwd; ls -la; cat "efsTest.txt"
+          python3 test.py >> /efs/efsTest.txt 2&>1          
+          cat /efs/efsTest.txt
