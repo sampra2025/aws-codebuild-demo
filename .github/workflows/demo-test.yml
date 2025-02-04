@@ -17,7 +17,7 @@ jobs:
           pwd; ls -la
           python3 test.py >> /efs/efsTest.txt
           cat /efs/efsTest.txt
-          - run: |
+          
       - name: GithubVariable
         run: |
           echo ${{ github.workspace }}
