@@ -9,7 +9,7 @@ jobs:
       - codebuild-smTestWithVPC-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - name: Checkout Code
-        uses: actions/checkout@4
+        uses: actions/checkout@v3
       - name: Build Code
         run: |
           cd $ {{env.CODEBUILD_SRC_DIR}}
