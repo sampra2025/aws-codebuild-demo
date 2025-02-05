@@ -18,7 +18,7 @@ jobs:
           pwd; ls -la
           python3 test.py >> /efs/efsTest.txt
           cat /efs/efsTest.txt
-          mkdir -p gh-runners/quic-yocto/kas-mirrors
+          cd /efs; mkdir -p gh-runners/quic-yocto/kas-mirrors
           find /efs
           
       - name: GithubVariable
