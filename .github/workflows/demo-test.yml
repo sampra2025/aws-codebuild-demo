@@ -12,11 +12,10 @@ jobs:
         uses: actions/checkout@v3      
       - name: Build Code
         run: |
-          id; sudo su builder; id
-          pwd; ls -la
-          cd ${{ github.workspace }}
-          pwd; ls -la
-          apt-get update
+          id
+          sudo su builder
+          id
+          which sudo
           
       - name: GithubVariable
         run: |
