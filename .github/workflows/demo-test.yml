@@ -13,9 +13,7 @@ jobs:
       - name: Build Code
         run: |
           id
-          sudo su codebuild-user
-          id
-          which sudo
+          sudo -i -s builder; id 
           
       - name: GithubVariable
         run: |
