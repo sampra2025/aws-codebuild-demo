@@ -13,7 +13,7 @@ jobs:
       - name: Build Code
         run: |
           id
-          sudo -i -s builder; id 
+          sudo -i -u builder; id 
           
       - name: GithubVariable
         run: |
