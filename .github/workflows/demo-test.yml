@@ -5,8 +5,8 @@ on:
 
 jobs:
   GH-To-AWS-CodeBuild-Integratio-Test:
-    runs-on: ubuntu-latest
-      #- codebuild-smTestWithVPC-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on:
+      - codebuild-smTestWithVPC-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3      
